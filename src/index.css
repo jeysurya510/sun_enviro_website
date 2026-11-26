@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  /* PREMIUM MODERN COLOR PALETTE */
+  --color-brand-navy: #0F172A;    /* Deep Slate/Navy */
+  --color-brand-blue: #0EA5E9;    /* Bright Sky Blue */
+  --color-brand-aqua: #06B6D4;    /* Cyan Aqua */
+  --color-brand-green: #10B981;   /* Emerald Green */
+  --color-brand-light: #F8FAFC;   /* Very Light Slate */
+  
+  /* Custom Premium Fonts */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-brand-light text-slate-800 antialiased overflow-x-hidden;
+    font-family: var(--font-sans);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+  background: #0EA5E9; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0F172A; 
+}
+
+/* Floating Animation for Icons */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
