@@ -1,11 +1,11 @@
-import HeroSection from '../components/Herosection';
-import AboutSection from '../components/AboutSection';
-import ProductsSection from '../components/ProductsSection';
-import ProcessSection from '../components/ProcessSection'; // Add pannu
-import WhyUsSection from '../components/WhyUsSection';
-import ClientMarquee from '../components/ClientMarquee'; // Add pannu
-import ContactSection from '../components/ContactSection';
-import FAQSection from '../components/FAQSection';
+import HeroSection from '../components/HeroSection';       // S capital
+import AboutSection from '../components/AboutSection';     // A capital
+import ProductsSection from '../components/ProductsSection'; // P capital
+import ProcessSection from '../components/ProcessSection'; // P capital
+import WhyUsSection from '../components/WhyUsSection';     // W capital
+import ClientMarquee from '../components/ClientMarquee';   // C capital
+import FAQSection from '../components/FAQSection';         // FAQ capital
+import ContactSection from '../components/ContactSection'; // C capital
 
 const Home = () => {
   return (
@@ -13,10 +13,10 @@ const Home = () => {
       <HeroSection />
       <AboutSection />
       <ProductsSection />
-      <ProcessSection />    {/* New Section */}
+      <ProcessSection />
       <WhyUsSection />
-      <ClientMarquee />   
-      <FAQSection />  {/* New Section */}
+      <ClientMarquee />
+      <FAQSection />
       <ContactSection />
     </div>
   );
