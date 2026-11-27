@@ -1,20 +1,24 @@
-import HeroSection from '../components/HeroSection';       // S capital
-import AboutSection from '../components/AboutSection';     // A capital
-import ProductsSection from '../components/ProductsSection'; // P capital
-import ProcessSection from '../components/ProcessSection'; // P capital
-import WhyUsSection from '../components/WhyUsSection';     // W capital
-import ClientMarquee from '../components/ClientMarquee';   // C capital
-import FAQSection from '../components/FAQSection';         // FAQ capital
-import ContactSection from '../components/ContactSection'; // C capital
+import HeroSection from '../components/HeroSection';
+import StatsSection from '../components/StatsSection';
+import AboutSection from '../components/AboutSection';
+import ProductsSection from '../components/ProductsSection';
+import ProcessSection from '../components/ProcessSection';
+import WhyUsSection from '../components/WhyUsSection';
+import TestimonialSection from '../components/TestimonialSection';
+import ClientMarquee from '../components/ClientMarquee';
+import FAQSection from '../components/FAQSection';
+import ContactSection from '../components/ContactSection';
 
 const Home = () => {
   return (
     <div className="bg-white overflow-hidden font-sans">
       <HeroSection />
+      <StatsSection />
       <AboutSection />
       <ProductsSection />
       <ProcessSection />
       <WhyUsSection />
+      <TestimonialSection />
       <ClientMarquee />
       <FAQSection />
       <ContactSection />
