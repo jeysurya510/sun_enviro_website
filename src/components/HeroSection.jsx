@@ -12,7 +12,17 @@ const HeroSection = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <h4 className="text-brand-orange font-bold uppercase tracking-widest mb-4 text-sm md:text-base">Saviour of Mother Earth</h4>
+          {/* CLIENT SPECIFIC TAGLINE START */}
+          <div className="mb-6">
+            <p className="text-brand-orange font-bold uppercase tracking-widest text-sm md:text-base mb-2 drop-shadow-md">
+              Saviour of Mother Earth
+            </p>
+            <h4 className="text-white text-lg md:text-2xl font-semibold drop-shadow-lg">
+              Industrial Effluent / Sewage / Municipal Sewage / Hospital
+            </h4>
+          </div>
+          {/* CLIENT SPECIFIC TAGLINE END */}
+
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
             Effective Water <br /> Treatment Solutions
           </h1>

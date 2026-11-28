@@ -9,7 +9,15 @@ const WhyUsSection = () => {
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="lg:w-1/2">
             <h2 className="text-sm font-bold text-brand-orange uppercase tracking-wider mb-2">Why Choose Us</h2>
             <h3 className="text-3xl md:text-4xl font-bold text-brand-navy mb-6">Reliable & Sustainable Solutions</h3>
-            <p className="text-slate-600 mb-8 text-lg">We combine advanced technology with sustainable engineering to deliver reliable and energy-efficient water solutions.</p>
+            <p className="text-slate-600 mb-4 text-lg">We combine advanced technology with sustainable engineering to deliver reliable and energy-efficient water solutions.</p>
+            
+            {/* Client specific industries line */}
+            <div className="bg-white p-4 rounded-lg border-l-4 border-brand-orange mb-8">
+              <p className="text-brand-navy font-bold text-sm md:text-base">
+                Industries We Serve: <span className="text-brand-blue">Industrial Effluent / Sewage / Municipal Sewage / Hospital</span>
+              </p>
+            </div>
+
             <div className="space-y-6">
               {[
                 { title: "High Purity Water", desc: "Removes harmful impurities, TDS, and bacteria." },
