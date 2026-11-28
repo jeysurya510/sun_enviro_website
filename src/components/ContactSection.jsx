@@ -10,6 +10,8 @@ const ContactSection = () => {
           <h3 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">Get In Touch</h3>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          
+          {/* Contact Info */}
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="bg-brand-light p-8 md:p-10 rounded-lg border border-slate-200">
             <h3 className="text-2xl font-bold text-brand-navy mb-6">Contact Information</h3>
             <div className="space-y-6">
@@ -31,6 +33,8 @@ const ContactSection = () => {
               </div>
             </div>
           </motion.div>
+
+          {/* Enquiry Form */}
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="bg-white p-8 md:p-10 rounded-lg shadow-xl border border-slate-100">
             <h3 className="text-2xl font-bold text-brand-navy mb-6">Send an Enquiry</h3>
             <form className="space-y-5">
@@ -39,12 +43,27 @@ const ContactSection = () => {
                 <div><label className="block text-sm font-semibold text-slate-700 mb-2">Phone</label><input type="tel" className="w-full px-4 py-3 rounded border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-blue bg-slate-50" placeholder="Your Phone" /></div>
               </div>
               <div><label className="block text-sm font-semibold text-slate-700 mb-2">Email Address</label><input type="email" className="w-full px-4 py-3 rounded border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-blue bg-slate-50" placeholder="Your Email" /></div>
+              
+              {/* Updated Service Dropdown */}
               <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-2">Select Service</label>
                 <select className="w-full px-4 py-3 rounded border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-blue bg-slate-50 text-slate-700">
-                  <option>Drinking RO Plant</option><option>Sewage Treatment (STP)</option><option>Effluent Treatment (ETP)</option><option>Ultra Filtration (UF)</option><option>Other Services</option>
+                  <option value="">-- Select a Service --</option>
+                  <option>STP - Sewage Water Treatment Plant</option>
+                  <option>ETP - Effluent Water Treatment Plant</option>
+                  <option>Gray Water Treatment Plant</option>
+                  <option>WTP - Water Treatment Plant</option>
+                  <option>RO Reverse Osmosis Systems</option>
+                  <option>DRO - Drinking Reverse Osmosis</option>
+                  <option>UF Ultra Filter Systems</option>
+                  <option>DM Plant & Evaporator</option>
+                  <option>ZLS - Zero Liquid Discharge</option>
+                  <option>SWM - Solid Waste Management</option>
+                  <option>CTE & CTO Services</option>
+                  <option>Automated Sustainable Equipment</option>
                 </select>
               </div>
+
               <div><label className="block text-sm font-semibold text-slate-700 mb-2">Message</label><textarea rows="3" className="w-full px-4 py-3 rounded border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-blue bg-slate-50" placeholder="Your requirements..."></textarea></div>
               <button type="button" className="w-full bg-brand-blue text-white py-4 rounded font-bold text-lg hover:bg-blue-700 transition-colors shadow-lg">Submit Enquiry</button>
             </form>
