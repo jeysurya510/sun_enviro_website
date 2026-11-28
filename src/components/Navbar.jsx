@@ -3,6 +3,9 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { FaBars, FaTimes, FaPhoneAlt, FaEnvelope, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 
+// Unga logo file path inga kudunga (e.g., /logo.png or ../assets/logo.png)
+import logoImg from '/logo.png'; // Example: public folder la irundha '/logo.png'
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -41,7 +44,7 @@ const Navbar = () => {
 
   return (
     <header className="fixed w-full z-50">
-      {/* Top Info Bar (Netsol Style) */}
+      {/* Top Info Bar */}
       <div className="bg-brand-navy text-white py-2 px-4 sm:px-6 lg:px-8 text-xs md:text-sm hidden md:block">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-6">
@@ -59,11 +62,16 @@ const Navbar = () => {
       {/* Main Navbar */}
       <nav className={`bg-white transition-all duration-300 ${scrolled ? 'shadow-md py-3' : 'py-4'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+          
+          {/* Logo Section Updated Here */}
           <a href="/" onClick={(e) => handleNavClick(e, '/#home')} className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-brand-blue rounded flex items-center justify-center text-white font-bold text-xl">
-              S
-            </div>
-            <span className="text-2xl font-extrabold text-brand-navy tracking-tight">SUN ENVIRO</span>
+            <img 
+              src={logoImg} 
+              alt="Sun Enviro Logo" 
+              className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+            />
+            {/* Unga logo-la already company name irundha intha text-a comment out pannikonga */}
+            <span className="text-2xl font-extrabold text-brand-navy tracking-tight hidden sm:block">SUN ENVIRO</span>
           </a>
 
           <div className="hidden md:flex space-x-8 items-center">
