@@ -3,8 +3,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { FaBars, FaTimes, FaPhoneAlt, FaEnvelope, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// Unga logo file path inga kudunga (e.g., /logo.png or ../assets/logo.png)
-import logoImg from '/logo.png'; // Example: public folder la irundha '/logo.png'
+// Unga logo path inga correct-a irukka check pannikonga (e.g., '/logo.png' or '../assets/logo.png')
+import logoImg from '/logo.png'; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,7 +44,7 @@ const Navbar = () => {
 
   return (
     <header className="fixed w-full z-50">
-      {/* Top Info Bar */}
+      {/* Top Info Bar (Netsol Style) */}
       <div className="bg-brand-navy text-white py-2 px-4 sm:px-6 lg:px-8 text-xs md:text-sm hidden md:block">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-6">
@@ -63,15 +63,15 @@ const Navbar = () => {
       <nav className={`bg-white transition-all duration-300 ${scrolled ? 'shadow-md py-3' : 'py-4'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           
-          {/* Logo Section Updated Here */}
-          <a href="/" onClick={(e) => handleNavClick(e, '/#home')} className="flex items-center gap-2 group">
+          {/* Logo Section */}
+          <a href="/" onClick={(e) => handleNavClick(e, '/#home')} className="flex items-center gap-3 group">
             <img 
               src={logoImg} 
               alt="Sun Enviro Logo" 
-              className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+              className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
             />
-            {/* Unga logo-la already company name irundha intha text-a comment out pannikonga */}
-            <span className="text-2xl font-extrabold text-brand-navy tracking-tight hidden sm:block">SUN ENVIRO</span>
+            {/* Ithu mobile layum theriyum */}
+            <span className="text-xl sm:text-2xl font-extrabold text-brand-navy tracking-tight block">SUN ENVIRO</span>
           </a>
 
           <div className="hidden md:flex space-x-8 items-center">
@@ -101,6 +101,10 @@ const Navbar = () => {
                   {item.name}
                 </a>
               ))}
+              {/* Mobile view la Get a Quote button venum na, ithu uncomment pannunga */}
+              {/* <a href="#contact" onClick={(e) => handleNavClick(e, '/#contact')} className="bg-brand-orange text-white px-6 py-2 rounded font-bold text-center mt-2 shadow-sm">
+                Get a Quote
+              </a> */}
             </div>
           </motion.div>
         )}
